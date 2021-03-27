@@ -11,6 +11,6 @@ fn get_hello() -> String {
 fn main() {
   rocket::ignite()
     .mount("/api/", routes![get_hello])
-    .mount("/", StaticFiles::from("public"))
+    .mount("/", StaticFiles::from("client/dist"))
     .launch();
 }
